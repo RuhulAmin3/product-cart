@@ -48,6 +48,8 @@ model Product {
 model AddToCart {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   quantity  Int
+  color     String
+  size      String
   productId String  @db.ObjectId
   subTotal  Int
   products  Product @relation(fields: [productId], references: [id])
