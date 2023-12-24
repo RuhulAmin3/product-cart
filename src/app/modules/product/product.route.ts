@@ -11,6 +11,7 @@ router.post(
   dataValidation(productValidation.createProductSchema),
   productController.createProduct
 );
+
 router.get("/", productController.getAllProducts);
 
 router.get("/:id", productController.getProduct);

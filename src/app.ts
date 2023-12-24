@@ -16,6 +16,10 @@ app.use(cors());
 
 app.use("/api/v1", routes);
 
+app.get("/", (req, res, next) => {
+  res.send("welcome the product-cart backend apis");
+});
+
 app.use(globalErrorHandler);
 
 app.use((req, res, next) => {

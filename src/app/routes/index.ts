@@ -7,7 +7,7 @@ const router = express.Router();
 const allRoutes = [
   { path: "/auth", route: authRoutes },
   { path: "/products", route: productRoutes },
-  { path: "/add-to-cart", route: addToCartRoutes },
+  { path: "/cart", route: addToCartRoutes },
 ];
 
 allRoutes.forEach((route) => router.use(route.path, route.route));

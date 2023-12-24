@@ -20,8 +20,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     errorMessages = [{ path: "", message: err.message }];
   }
 
-  console.log("err from global", err);
-  res.status(statusCode).json({
+  res.status(statusCode ? statusCode : 500).json({
     success: false,
     name: message,
     errorMessages,
